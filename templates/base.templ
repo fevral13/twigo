@@ -1,0 +1,22 @@
+package templates
+
+templ Header(){
+    <head>
+        <script>
+        console.log("Hello World");
+
+    </script>
+        <title>Base</title>
+        </head>
+}
+
+templ Base(content templ.Component) {
+    <!DOCTYPE html>
+        <html lang="en">
+        @Header()
+        <body>
+        @content
+        </body>
+
+        </html>
+}
